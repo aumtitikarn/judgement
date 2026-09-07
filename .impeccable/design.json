@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-07T00:00:00.000Z",
+  "title": "Design System: จันทราไพ่",
+  "extensions": {
+    "colorMeta": {
+      "gold-400": {
+        "role": "primary",
+        "displayName": "Candle Gold",
+        "canonical": "#e2bd6b",
+        "tonalRamp": ["#2a1f08", "#4a3a11", "#6d571c", "#93762a", "#c9a227", "#e2bd6b", "#f0d89b", "#f9eeda"]
+      },
+      "gold-300": {
+        "role": "primary",
+        "displayName": "Lit Gold",
+        "canonical": "#f0d89b",
+        "tonalRamp": ["#2e2510", "#4f4019", "#725d24", "#987f31", "#c0a447", "#e2bd6b", "#f0d89b", "#fbf3e2"]
+      },
+      "gold-200": {
+        "role": "primary",
+        "displayName": "Pale Gold",
+        "canonical": "#f7e7bf",
+        "tonalRamp": ["#302915", "#524621", "#75652e", "#9a883c", "#c0ac5e", "#dfcd91", "#f7e7bf", "#fdf8ec"]
+      },
+      "gold-500": {
+        "role": "primary",
+        "displayName": "Deep Gold",
+        "canonical": "#c9a227",
+        "tonalRamp": ["#241b05", "#3f300a", "#5c4711", "#7b5f17", "#9c7a1e", "#c9a227", "#e0bf58", "#f2dda0"]
+      },
+      "mystic-400": {
+        "role": "secondary",
+        "displayName": "Mystic Violet",
+        "canonical": "#a68bff",
+        "tonalRamp": ["#18103a", "#271a5e", "#392785", "#4d35ab", "#6b4fd0", "#8a6cf0", "#a68bff", "#d6c9ff"]
+      },
+      "mystic-500": {
+        "role": "secondary",
+        "displayName": "Deep Violet",
+        "canonical": "#7c5cff",
+        "tonalRamp": ["#130c33", "#1f1355", "#2e1c7c", "#4028a6", "#5b3fd6", "#7c5cff", "#a68bff", "#d6c9ff"]
+      },
+      "mystic-600": {
+        "role": "secondary",
+        "displayName": "Wash Violet",
+        "canonical": "#5b3fd6",
+        "tonalRamp": ["#0f0a26", "#191040", "#25185e", "#33227f", "#4530a8", "#5b3fd6", "#8467f0", "#c2b1fb"]
+      },
+      "night-950": {
+        "role": "neutral",
+        "displayName": "Ink Night",
+        "canonical": "#06040f",
+        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+      },
+      "night-900": {
+        "role": "neutral",
+        "displayName": "Panel Night",
+        "canonical": "#0c0820",
+        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+      },
+      "night-850": {
+        "role": "neutral",
+        "displayName": "Raised Night",
+        "canonical": "#120d2b",
+        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+      },
+      "night-800": {
+        "role": "neutral",
+        "displayName": "Card Night",
+        "canonical": "#191139",
+        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+      },
+      "night-700": {
+        "role": "neutral",
+        "displayName": "Deck Night",
+        "canonical": "#241a4d",
+        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+      },
+      "night-600": {
+        "role": "neutral",
+        "displayName": "Deck Sheen",
+        "canonical": "#33256b",
+        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+      },
+      "mist-100": {
+        "role": "neutral",
+        "displayName": "Moon Mist",
+        "canonical": "#efeaff",
+        "tonalRamp": ["#191533", "#2b2456", "#40367c", "#584ba1", "#7568bd", "#9b90d4", "#cabfe8", "#efeaff"]
+      },
+      "mist-300": {
+        "role": "neutral",
+        "displayName": "Dim Mist",
+        "canonical": "#cabfe8",
+        "tonalRamp": ["#191533", "#2b2456", "#40367c", "#584ba1", "#7568bd", "#9184b8", "#cabfe8", "#efeaff"]
+      },
+      "mist-500": {
+        "role": "neutral",
+        "displayName": "Faint Mist",
+        "canonical": "#9184b8",
+        "tonalRamp": ["#191533", "#2b2456", "#40367c", "#584ba1", "#7568bd", "#9184b8", "#cabfe8", "#efeaff"]
+      },
+      "alert-rose": {
+        "role": "tertiary",
+        "displayName": "Alert Rose",
+        "canonical": "#fda4af",
+        "tonalRamp": ["#3d1119", "#611c28", "#89283a", "#b1364d", "#d45467", "#ec7f8e", "#fda4af", "#ffe4e6"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display — Trirong",
+        "purpose": "Page-opening h1 only. One per page: the hero on /, the title of a reading room."
+      },
+      "headline": {
+        "displayName": "Headline — Trirong",
+        "purpose": "Section openers. Almost always Pale Gold."
+      },
+      "title": {
+        "displayName": "Title — Trirong",
+        "purpose": "Card titles, panel headings, the name of a drawn card."
+      },
+      "body": {
+        "displayName": "Body — Noto Sans Thai",
+        "purpose": "All prose, AI reading text, card meanings. Held at 1.75 line-height for Thai tone marks; measure capped at max-w-xl/2xl."
+      },
+      "label": {
+        "displayName": "Label — Noto Sans Thai",
+        "purpose": "Position eyebrows above a drawn card, meta counts, field hints. The only tracked type in the system (0.2em)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "object-weight",
+        "value": "0 20px 60px rgba(0, 0, 0, 0.35)",
+        "purpose": "Panels floating above the page — the AI reading panel, the card detail sheet. Wide, low, pure black."
+      },
+      {
+        "name": "card-weight",
+        "value": "0 10px 30px rgba(0, 0, 0, 0.45)",
+        "purpose": "A single card resting on the table — every card back in the fan. Tighter and darker than object weight."
+      },
+      {
+        "name": "card-lifted",
+        "value": "0 16px 40px rgba(0, 0, 0, 0.5)",
+        "purpose": "A library-grid card on hover, paired with a -4px translate."
+      },
+      {
+        "name": "card-detail",
+        "value": "0 14px 36px rgba(0, 0, 0, 0.5)",
+        "purpose": "The large card image inside a detail sheet."
+      },
+      {
+        "name": "gold-emission",
+        "value": "0 10px 40px rgba(226, 189, 107, 0.3)",
+        "purpose": "The primary CTA. Light leaving the button, not the button floating. Rises to 0.35 alpha on the form submit."
+      },
+      {
+        "name": "sigil-emission",
+        "value": "0 0 24px rgba(226, 189, 107, 0.25)",
+        "purpose": "The 🌙 mark in the header. Symmetric, no offset — it glows in place."
+      }
+    ],
+    "motion": [
+      {
+        "name": "float",
+        "value": "float 7s ease-in-out infinite",
+        "purpose": "Ambient 10px vertical drift on the hero's fanned card backs, staggered 0.4s per card."
+      },
+      {
+        "name": "twinkle",
+        "value": "twinkle 4s ease-in-out infinite",
+        "purpose": "Opacity pulse 0.25 → 0.9 for point-light accents."
+      },
+      {
+        "name": "rise",
+        "value": "rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both",
+        "purpose": "Entrance for any panel that appears in response to an action — the reading panel, the card detail sheet. 18px up, fade in."
+      },
+      {
+        "name": "glow",
+        "value": "glow 3.5s ease-in-out infinite",
+        "purpose": "Opacity pulse 0.45 → 0.85 on the page starfield and on the streaming cursor / ✦ while the AI is thinking."
+      },
+      {
+        "name": "shuffle-sway",
+        "value": "shuffle-sway 1.1s ease-in-out infinite",
+        "purpose": "The deck sway during สับไพ่ — ±14px and ±6°, staggered 0.06s across 12 cards."
+      },
+      {
+        "name": "card-flip",
+        "value": "transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "The 3D reveal on a drawn card, at 1400px perspective. One card at a time."
+      },
+      {
+        "name": "state-transition",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for hover, border, and color state changes at ~150ms."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media (prefers-reduced-motion: reduce) { animation-duration: 0.001ms; transition-duration: 0.05ms }",
+        "purpose": "Global reduce block. Every new motion must survive it; JS-driven motion must opt in itself."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "container", "value": "72rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The ritual's forward motion — one per view. Gold gradient with emission glow.",
+      "html": "<button class=\"ds-btn-primary\">🔮 เริ่มดูดวง</button>",
+      "css": ".ds-btn-primary { display: inline-block; background: linear-gradient(to right, #c9a227, #f0d89b); color: #06040f; font-family: Trirong, Georgia, serif; font-size: 1.125rem; line-height: 1.4; padding: 0.75rem 2rem; border: none; border-radius: 9999px; cursor: pointer; box-shadow: 0 10px 40px rgba(226, 189, 107, 0.3); transition: filter 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { filter: brightness(1.1); } .ds-btn-primary:focus-visible { outline: 2px solid rgba(226, 189, 107, 0.5); outline-offset: 3px; } .ds-btn-primary:active { transform: scale(0.95); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The secondary path. Gold hairline, no fill until hover.",
+      "html": "<button class=\"ds-btn-outline\">เปิดคลังไพ่</button>",
+      "css": ".ds-btn-outline { display: inline-block; background: transparent; color: #f7e7bf; font-family: Trirong, Georgia, serif; font-size: 1.0625rem; line-height: 1.4; padding: 0.625rem 1.5rem; border: 1px solid rgba(226, 189, 107, 0.4); border-radius: 9999px; cursor: pointer; transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-outline:hover { background: rgba(226, 189, 107, 0.1); } .ds-btn-outline:focus-visible { outline: 2px solid rgba(226, 189, 107, 0.5); outline-offset: 3px; }"
+    },
+    {
+      "name": "Mystic Button",
+      "kind": "button",
+      "refersTo": "button-mystic",
+      "description": "AI controls only — 'อ่านใหม่อีกครั้ง'. Violet marks that จันทรา is the actor.",
+      "html": "<button class=\"ds-btn-mystic\">อ่านใหม่อีกครั้ง</button>",
+      "css": ".ds-btn-mystic { display: inline-block; background: transparent; color: #a68bff; font-family: 'Noto Sans Thai', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.6; padding: 0.375rem 1rem; border: 1px solid rgba(166, 139, 255, 0.4); border-radius: 9999px; cursor: pointer; transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms; } .ds-btn-mystic:hover { background: rgba(124, 92, 255, 0.1); } .ds-btn-mystic:focus-visible { outline: 2px solid rgba(166, 139, 255, 0.5); outline-offset: 3px; } .ds-btn-mystic:active { transform: scale(0.95); }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "A well, not a raised surface — darker than its container. The gold focus ring is the system's only focus treatment.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-demo-city\">เมืองที่เกิด<span class=\"ds-field-hint\">ไม่ทราบก็เว้นว่างได้</span></label><input class=\"ds-input\" id=\"ds-demo-city\" placeholder=\"เช่น เชียงใหม่\" /></div>",
+      "css": ".ds-field { text-align: left; font-family: 'Noto Sans Thai', system-ui, sans-serif; } .ds-field-label { display: block; font-size: 0.875rem; line-height: 1.6; color: #cabfe8; margin-bottom: 0.375rem; } .ds-field-hint { margin-left: 0.375rem; font-size: 0.75rem; color: #9184b8; } .ds-input { width: 100%; background: rgba(6, 4, 15, 0.6); color: #efeaff; font-family: inherit; font-size: 1rem; line-height: 1.75; padding: 0.625rem 1rem; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.75rem; outline: none; transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-input::placeholder { color: rgba(145, 132, 184, 0.6); } .ds-input:focus { border-color: rgba(226, 189, 107, 0.5); box-shadow: 0 0 0 2px rgba(226, 189, 107, 0.2); }"
+    },
+    {
+      "name": "Gold Eyebrow Chip",
+      "kind": "chip",
+      "refersTo": "chip-gold",
+      "description": "Marks a status or a count above a heading. Opened with ✦.",
+      "html": "<span class=\"ds-chip-gold\">✦ ไพ่ทาโรต์ครบทั้ง 78 ใบ พร้อมคำทำนายภาษาไทย</span>",
+      "css": ".ds-chip-gold { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(226, 189, 107, 0.1); color: #f7e7bf; font-family: 'Noto Sans Thai', system-ui, sans-serif; font-size: 0.75rem; line-height: 1.6; padding: 0.375rem 1rem; border: 1px solid rgba(226, 189, 107, 0.3); border-radius: 9999px; }"
+    },
+    {
+      "name": "Keyword Chip",
+      "kind": "chip",
+      "refersTo": "chip-neutral",
+      "description": "Keyword tags on a card. Neutral by design so the card's own gold stays dominant.",
+      "html": "<span class=\"ds-chip-neutral\">การเริ่มต้น</span>",
+      "css": ".ds-chip-neutral { display: inline-block; background: rgba(255, 255, 255, 0.05); color: #cabfe8; font-family: 'Noto Sans Thai', system-ui, sans-serif; font-size: 0.75rem; line-height: 1.6; padding: 0.25rem 0.75rem; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 9999px; }"
+    },
+    {
+      "name": "Flow Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "A navigating surface. Lifts 4px on hover and brightens its hairline; cards that don't navigate don't lift.",
+      "html": "<a class=\"ds-card\" href=\"#\"><span class=\"ds-card-glyph\">🔮</span><h3 class=\"ds-card-title\">เริ่มดูดวง</h3><p class=\"ds-card-tagline\">พิมพ์คำถามของคุณเอง</p><p class=\"ds-card-body\">ไม่ต้องเลือกหมวด พิมพ์เรื่องที่ค้างคาใจลงไปตรง ๆ แล้วเปิดไพ่ 3 ใบ</p><span class=\"ds-card-cta\">ถามเลย →</span></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; max-width: 20rem; background: linear-gradient(to bottom right, rgba(25, 17, 57, 0.8), rgba(12, 8, 32, 0.7)); border: 1px solid rgba(226, 189, 107, 0.3); border-radius: 1.5rem; padding: 1.5rem; text-decoration: none; font-family: 'Noto Sans Thai', system-ui, sans-serif; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), border-color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-card:hover { transform: translateY(-4px); border-color: rgba(226, 189, 107, 0.6); } .ds-card-glyph { display: flex; align-items: center; justify-content: center; width: 3.5rem; height: 3.5rem; font-size: 1.875rem; background: rgba(201, 162, 39, 0.12); border: 1px solid rgba(201, 162, 39, 0.33); border-radius: 1rem; } .ds-card-title { margin: 1rem 0 0; font-family: Trirong, Georgia, serif; font-size: 1.5rem; font-weight: 400; line-height: 1.4; color: #efeaff; } .ds-card-tagline { margin: 0; font-size: 0.875rem; line-height: 1.6; color: #c9a227; } .ds-card-body { margin: 0.75rem 0 0; flex: 1; font-size: 0.875rem; line-height: 1.75; color: #cabfe8; } .ds-card-cta { margin-top: 1.25rem; font-family: Trirong, Georgia, serif; color: #f0d89b; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-card:hover .ds-card-cta { transform: translateX(4px); }"
+    },
+    {
+      "name": "AI Reading Panel",
+      "kind": "custom",
+      "refersTo": "card-surface",
+      "description": "The one surface bordered in violet — that hairline is the promise that จันทรา is speaking inside it. Object-weight shadow, rise entrance.",
+      "html": "<section class=\"ds-ai-panel\"><div class=\"ds-ai-head\"><div><h3 class=\"ds-ai-title\">คำตอบสำหรับคำถามของคุณ</h3><p class=\"ds-ai-subject\">ความสัมพันธ์ที่เงียบหายไป</p></div><button class=\"ds-btn-mystic\">อ่านใหม่อีกครั้ง</button></div><p class=\"ds-ai-line\"><span class=\"ds-ai-bullet\">✦</span><span>ไพ่ใบนี้บอกว่า<strong class=\"ds-ai-strong\">ความเงียบ</strong>ไม่ได้แปลว่าจบ</span></p></section>",
+      "css": ".ds-ai-panel { max-width: 32rem; background: linear-gradient(to bottom right, rgba(25, 17, 57, 0.8), rgba(12, 8, 32, 0.8)); border: 1px solid rgba(166, 139, 255, 0.3); border-radius: 1rem; padding: 1.5rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); font-family: 'Noto Sans Thai', system-ui, sans-serif; } .ds-ai-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; } .ds-ai-title { margin: 0; font-family: Trirong, Georgia, serif; font-size: 1.25rem; font-weight: 400; line-height: 1.4; color: #a68bff; } .ds-ai-subject { margin: 0.25rem 0 0; font-size: 0.875rem; line-height: 1.6; color: #9184b8; } .ds-ai-line { display: flex; gap: 0.5rem; margin: 1.25rem 0 0; font-size: 1rem; line-height: 1.75; color: #efeaff; } .ds-ai-bullet { color: #e2bd6b; } .ds-ai-strong { font-family: Trirong, Georgia, serif; font-weight: 400; color: #f7e7bf; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky, blurred over the night ground. The last link is an outline button, not a text link; secondary links drop below 640px.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><span class=\"ds-nav-sigil\">🌙</span><span class=\"ds-nav-words\"><span class=\"ds-nav-name\">จันทราไพ่</span><span class=\"ds-nav-sub\">ไพ่ทาโรต์ออนไลน์</span></span></a><nav class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#\">แพ็กคำถาม</a><a class=\"ds-nav-link\" href=\"#\">คลังไพ่</a><a class=\"ds-nav-cta\" href=\"#\">เริ่มดูดวง</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; background: rgba(6, 4, 15, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-family: 'Noto Sans Thai', system-ui, sans-serif; } .ds-nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; } .ds-nav-sigil { display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; font-size: 1.125rem; background: #191139; border: 1px solid rgba(226, 189, 107, 0.4); border-radius: 9999px; box-shadow: 0 0 24px rgba(226, 189, 107, 0.25); } .ds-nav-words { display: block; line-height: 1.25; } .ds-nav-name { display: block; font-family: Trirong, Georgia, serif; font-size: 1.125rem; color: #f7e7bf; transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-nav-brand:hover .ds-nav-name { color: #f0d89b; } .ds-nav-sub { display: block; font-size: 0.75rem; color: #9184b8; } .ds-nav-links { display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; font-size: 0.875rem; } .ds-nav-link { padding: 0.5rem 0.75rem; color: #cabfe8; text-decoration: none; border-radius: 9999px; transition: background-color 150ms, color 150ms; } .ds-nav-link:hover { background: rgba(255, 255, 255, 0.05); color: #f7e7bf; } .ds-nav-cta { padding: 0.5rem 0.75rem; color: #f7e7bf; text-decoration: none; border: 1px solid rgba(226, 189, 107, 0.4); border-radius: 9999px; transition: background-color 150ms; } .ds-nav-cta:hover { background: rgba(226, 189, 107, 0.1); }"
+    },
+    {
+      "name": "Card Back",
+      "kind": "custom",
+      "refersTo": "card-surface",
+      "description": "The signature object — 78 of them in the fan alone. Inline SVG so it scales to every size the deck needs; never replaced by an image, never restyled per-surface.",
+      "html": "<div class=\"ds-card-back\"><svg viewBox=\"0 0 120 200\" preserveAspectRatio=\"xMidYMid slice\" aria-hidden=\"true\"><defs><radialGradient id=\"ds-cb-glow\" cx=\"50%\" cy=\"42%\" r=\"55%\"><stop offset=\"0%\" stop-color=\"#f0d89b\" stop-opacity=\"0.35\"/><stop offset=\"100%\" stop-color=\"#f0d89b\" stop-opacity=\"0\"/></radialGradient><mask id=\"ds-cb-moon\"><rect x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" fill=\"white\"/><circle cx=\"6.5\" cy=\"-2.5\" r=\"11\" fill=\"black\"/></mask><pattern id=\"ds-cb-grid\" width=\"14\" height=\"14\" patternUnits=\"userSpaceOnUse\"><path d=\"M7 0 L14 7 L7 14 L0 7 Z\" fill=\"none\" stroke=\"#e2bd6b\" stroke-opacity=\"0.16\" stroke-width=\"0.6\"/></pattern></defs><rect width=\"120\" height=\"200\" fill=\"url(#ds-cb-grid)\"/><rect width=\"120\" height=\"200\" fill=\"url(#ds-cb-glow)\"/><rect x=\"5\" y=\"5\" width=\"110\" height=\"190\" rx=\"7\" fill=\"none\" stroke=\"#e2bd6b\" stroke-opacity=\"0.5\" stroke-width=\"1\"/><rect x=\"9\" y=\"9\" width=\"102\" height=\"182\" rx=\"5\" fill=\"none\" stroke=\"#e2bd6b\" stroke-opacity=\"0.22\" stroke-width=\"0.5\"/><g transform=\"translate(60 100)\"><circle r=\"22\" fill=\"none\" stroke=\"#f0d89b\" stroke-opacity=\"0.55\" stroke-width=\"0.9\"/><circle r=\"15\" fill=\"none\" stroke=\"#f0d89b\" stroke-opacity=\"0.3\" stroke-width=\"0.6\"/><circle r=\"12.5\" fill=\"#f0d89b\" fill-opacity=\"0.85\" mask=\"url(#ds-cb-moon)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(45)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(90)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(135)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(180)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(225)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(270)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(315)\"/></g><g fill=\"#f7e7bf\" fill-opacity=\"0.75\"><circle cx=\"30\" cy=\"42\" r=\"1.1\"/><circle cx=\"88\" cy=\"56\" r=\"0.9\"/><circle cx=\"24\" cy=\"150\" r=\"0.9\"/><circle cx=\"94\" cy=\"146\" r=\"1.1\"/><circle cx=\"60\" cy=\"28\" r=\"1.3\"/><circle cx=\"60\" cy=\"172\" r=\"1.3\"/></g></svg></div>",
+      "css": ".ds-card-back { position: relative; width: 116px; height: 199px; overflow: hidden; background: linear-gradient(to bottom right, #241a4d, #191139, #06040f); border: 1px solid rgba(226, 189, 107, 0.3); border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-card-back:hover { transform: translateY(-1.75rem); } .ds-card-back svg { width: 100%; height: 100%; display: block; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Midnight Reading Table",
+    "overview": "The whole system is one scene: a small table late at night, a deck fanned across it, and จันทรา sitting opposite you. Everything visual answers to that room. The near-black ground is not \"dark mode\" — it is the unlit space around the table. Gold is not a brand color — it is the candle. The violet that rises at the page edges is the room's dark air, not an accent looking for a job. This matters because the visitor is alone on a phone at 1am with something specific weighing on them; the design's job is to make a small lit place for them to sit down in, not to perform mysticism at them.\n\nThe density is unhurried. Sections breathe at 3.5rem, body copy runs at 1.75 line-height because Thai ascenders and descenders need the room, and the ritual (intro → shuffle → pick → flip) is paced on purpose. Nothing here should read as an app trying to get the visitor through a funnel. The surfaces are soft-cornered and tappable because the primary session is one thumb on a small screen — warmth and reachability are the same decision.\n\nThe one thing this system must never become is a cosmic-mystic template: purple-on-black gradients, glowing orbs, sparkle overlays used as decoration, stock crystal-ball imagery. The starfield and the ambient glow exist at the lowest possible amplitude to suggest a room with a window, and they stop there. Restraint is what separates a reading table from a fortune-teller stock photo.",
+    "keyCharacteristics": [
+      "Near-black indigo ground (#06040f) with three barely-there radial washes; never a flat black",
+      "One warm gold family carrying every act of attention, against a cool violet-tinted neutral",
+      "Trirong (serif) for every heading and every moment of voice; Noto Sans Thai for everything read at length",
+      "Full pills for actions, 16–24px rounding on surfaces, hairline white borders at 10%",
+      "Two separate depth vocabularies: black shadow for weight, colored glow for emission",
+      "Dark-only by commitment (color-scheme: dark), motion fully reduced under prefers-reduced-motion"
+    ],
+    "rules": [
+      {
+        "name": "The Light Source Rule",
+        "body": "Gold marks where the eye should go, and nowhere else: the primary action, the frame of a card, the heading that opens a section, the thing just revealed. If a gold element is not one of those four, it is decoration and it comes out. This is the rule most likely to be broken by a well-meaning variant.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Voice Rule",
+        "body": "Violet belongs to the AI reading and to nothing else on the page. A violet border is a promise that จันทรา is speaking inside it. Using violet for a generic panel breaks the only signal the reading surface has.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Pure Black Rule",
+        "body": "The ground is #06040f under three radial washes and a starfield, never #000. Any surface that reads as flat black has lost the room.",
+        "section": "colors"
+      },
+      {
+        "name": "The Category Stays In Its Lane Rule",
+        "body": "Category accent hues appear only as chip border (27%) and chip fill (8%). They never become text, button, or panel color — eleven competing hues would shred the gold.",
+        "section": "colors"
+      },
+      {
+        "name": "The Thai Leading Rule",
+        "body": "Body text never drops below 1.75 line-height and headings never below 1.25. Thai stacks vowels and tone marks above and below the baseline; Latin-tuned leading collides them. leading-relaxed on prose is not a preference, it is legibility.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serif Speaks Rule",
+        "body": "Trirong appears wherever the site has a voice: headings, card names, the <strong> inside an AI reading, the number on a step card. Noto Sans Thai appears wherever the site is being read. A Trirong paragraph and a Noto Sans heading are both errors.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Tracking On Thai Rule",
+        "body": "Letter-spacing above 0 is reserved for the 0.2em label style and never applied to Thai body copy at any size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Shadow Or Glow Rule",
+        "body": "An element gets black shadow or colored glow, never both. Black means mass; gold means light. An element carrying both is claiming to be a heavy lamp, and it reads as muddy.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hairline Before Shadow Rule",
+        "body": "Reach for a 1px white/10 border before reaching for a shadow. Most panels in this system are separated by tone and hairline alone; adding shadow to a resting panel flattens the ones that have earned it.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do treat gold as the light in the room: primary action, card frame, section heading, revealed content. Four jobs, no fifth.",
+      "Do keep violet exclusively for AI output — the reading panel border, its heading, its controls, the position eyebrow.",
+      "Do hold body copy at 1.75 line-height and headings at 1.25; Thai tone marks need the vertical room.",
+      "Do separate surfaces with tone plus a 1px white/10 hairline before considering a shadow.",
+      "Do build every layout as one column first; columns appear at md/lg and nowhere below 640px.",
+      "Do use Trirong for anything with a voice and Noto Sans Thai for anything read at length.",
+      "Do give every new motion a prefers-reduced-motion path — the global reduce block already covers animation/transition, so anything driven by JS must opt in itself.",
+      "Do keep focus visible as the gold border + gold-400/20 ring; it is the system's only focus treatment."
+    ],
+    "donts": [
+      "Don't use pure black (#000) or pure white (#fff) as a text or surface color; the ground is #06040f and text tops out at #efeaff.",
+      "Don't put a black shadow and a colored glow on the same element.",
+      "Don't let a category accent hue become a text color, a button, or a panel background.",
+      "Don't add sparkle, orb, gradient-mesh, or crystal-ball decoration — the starfield and ambient wash are the entire atmospheric budget and they are already spent.",
+      "Don't introduce a third typeface, or a square-cornered button.",
+      "Don't use solid opaque borders; every border in this system is a white or accent hairline under 50% opacity.",
+      "Don't dim text below Faint Mist (#9184b8) on the night ground.",
+      "Don't compress the ritual for speed — the shuffle, the fan, and the one-at-a-time flip are the product, not loading states."
+    ]
+  }
+}
