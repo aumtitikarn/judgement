@@ -1,13 +1,20 @@
 ---
-name: จันทราไพ่
+name: Judgement
 description: A Thai tarot site where the visitor draws their own cards, lit like a table at midnight.
 colors:
+  deck-700: "#241a4d"
+  deck-800: "#191139"
+  deck-950: "#06040f"
+  line-faint: "rgb(255 255 255 / 0.05)"
+  line: "rgb(255 255 255 / 0.1)"
+  line-strong: "rgb(255 255 255 / 0.18)"
+  inset: "rgb(255 255 255 / 0.03)"
+  inset-strong: "rgb(255 255 255 / 0.05)"
+  alert: "#fda4af"
   night-950: "#06040f"
   night-900: "#0c0820"
   night-850: "#120d2b"
   night-800: "#191139"
-  night-700: "#241a4d"
-  night-600: "#33256b"
   gold-200: "#f7e7bf"
   gold-300: "#f0d89b"
   gold-400: "#e2bd6b"
@@ -18,7 +25,6 @@ colors:
   mist-100: "#efeaff"
   mist-300: "#cabfe8"
   mist-500: "#9184b8"
-  alert-rose: "#fda4af"
 typography:
   display:
     fontFamily: "Trirong, Georgia, serif"
@@ -95,7 +101,7 @@ components:
   card-surface-hover:
     backgroundColor: "rgba(18, 13, 43, 0.7)"
   card-inset:
-    backgroundColor: "rgba(255, 255, 255, 0.03)"
+    backgroundColor: "{colors.inset}"
     textColor: "{colors.mist-300}"
     rounded: "{rounded.md}"
     padding: "1.25rem"
@@ -106,7 +112,7 @@ components:
     rounded: "{rounded.sm}"
     padding: "0.625rem 1rem"
   chip-neutral:
-    backgroundColor: "rgba(255, 255, 255, 0.05)"
+    backgroundColor: "{colors.inset-strong}"
     textColor: "{colors.mist-300}"
     typography: "{typography.label}"
     rounded: "{rounded.full}"
@@ -124,11 +130,17 @@ components:
     rounded: "{rounded.full}"
     padding: "0.5rem 0.75rem"
   nav-link-hover:
-    backgroundColor: "rgba(255, 255, 255, 0.05)"
+    backgroundColor: "{colors.inset-strong}"
     textColor: "{colors.gold-200}"
 ---
 
-# Design System: จันทราไพ่
+# Design System: Judgement
+
+> **Two themes, one world.** Every token below is the **dark** theme, which is normative and the
+> default. The light theme ("รุ่งอรุณสีม่วง" — violet dawn) overrides the same custom properties under
+> `:root[data-theme="light"]` in `app/globals.css`; because Tailwind v4 compiles every color utility
+> to `var(--color-*)`, retinting those variables re-themes the whole site with no component changes.
+> That only works if components never hardcode a color — see **The Token Or Nothing Rule**.
 
 ## Overview
 
@@ -144,9 +156,9 @@ The one thing this system must never become is a cosmic-mystic template: purple-
 - Near-black indigo ground (`#06040f`) with three barely-there radial washes; never a flat black
 - One warm gold family carrying every act of attention, against a cool violet-tinted neutral
 - Trirong (serif) for every heading and every moment of voice; Noto Sans Thai for everything read at length
-- Full pills for actions, 16–24px rounding on surfaces, hairline white borders at 10%
+- Full pills for actions, 16–24px rounding on surfaces, hairline borders via the `line-*` tokens
 - Two separate depth vocabularies: black shadow for weight, colored glow for emission
-- Dark-only by commitment (`color-scheme: dark`), motion fully reduced under `prefers-reduced-motion`
+- Dark by default with a light "violet dawn" theme; motion fully reduced under `prefers-reduced-motion`
 
 ## Colors
 
@@ -184,6 +196,20 @@ A single warm gold lighting a cool violet-black room, with a violet-tinted neutr
 
 **The Category Stays In Its Lane Rule.** Category accent hues appear only as chip border (27%) and chip fill (8%). They never become text, button, or panel color — eleven competing hues would shred the gold.
 
+**The Token Or Nothing Rule.** No component may name a color, a border, or a shadow literally. `border-white/10`, `bg-white/[0.03]`, `text-rose-300`, and `shadow-[0_20px_60px_rgba(0,0,0,0.35)]` are all banned: a hardcoded white hairline is invisible on paper and a black shadow reads as a smudge. Use `border-line`, `bg-inset`, `text-alert`, `shadow-[var(--shadow-object)]`. This is the rule the light theme is built on; break it once and that element stops theming.
+
+**The Deck Is An Object Rule.** The card itself never themes. `deck-700` / `deck-800` / `deck-950` are fixed in both themes, because a printed card lying on a pale table is still a dark card. Only the room changes; the deck does not.
+
+### The light theme: รุ่งอรุณสีม่วง
+
+Same room, dawn instead of candlelight. The ground becomes pale violet paper (`#f4f1fb`); the mist ramp inverts into ink (`#1a1433` / `#4a3f72` / `#6f6394`); gold darkens to stay readable on paper (`#7a5c0d` / `#82640f` / `#9a7414`) and violet darkens with it (`#5b3fd6`). Both named color rules survive the inversion: gold is still the only light source and violet is still the only AI voice — they are merely deeper so they read on a light ground.
+
+Three things change character rather than value:
+
+- **The starfield goes out.** `--starfield: none` in light. It is dawn; the stars are gone.
+- **Shadows stop being black.** Every shadow becomes violet-tinted (`rgb(42 32 74 / …)`), and gold emission becomes a warm halo (`rgb(122 92 13 / …)`). Black shadow on paper reads as dirt.
+- **`gold-500` goes darker than its dark-theme value** (`#5c440a`). It is only ever the primary button's low gradient stop, never text, so it is free to drop far enough to keep the gradient's dark→light direction. Matched to `gold-300`, the button flattens into solid brown.
+
 ## Typography
 
 **Display Font:** Trirong (with Georgia, serif) — `--font-thai-display`
@@ -216,6 +242,12 @@ The 78-card fan is the one deliberately overflowing element: a horizontally scro
 
 Sticky header at `z-30` with `backdrop-blur-md` over `night-950/70`; the full-screen card modal sits at `z-50` over `night-950/85`. `scroll-mt-24` on anchored sections keeps the sticky header from eating the target.
 
+### The atmosphere layer
+
+The ground is a flat `background-color` on `body` plus **two `position: fixed` pseudo-element layers** at `z-0` — `body::before` carries the three radial washes (`--atmosphere`), `body::after` carries the starfield (`--starfield`). The page content sits above them in a `relative z-10` wrapper.
+
+**The Atmosphere Is Fixed Rule.** The washes must never be a `background-image` on `body`. `<html>` is `h-full`, so the root's box is one viewport tall; a body background propagates to the canvas using the *root's* positioning area, and `background-repeat` then tiles it once per viewport height — a visible seam every screen on the way down, and on `/cards` (a ~14,000px page) that is seventeen of them. Anchoring to the viewport also beats `background-attachment: fixed`, which forces a full-screen repaint per scroll frame on mobile Safari — the exact device this site is built for.
+
 ## Elevation & Depth
 
 The system uses two shadow vocabularies with strictly separate jobs, over a base of tonal layering. Surfaces are stacked by tone — `night-950` ground, `night-900/60` panel, `white/[0.03]` inset — separated by hairline `white/10` borders, and most of them carry no shadow at all. Shadow appears only when something is a physical object (a card, a lifted panel) or a light (a CTA, a lit frame), and those two get different treatments.
@@ -226,6 +258,8 @@ The system uses two shadow vocabularies with strictly separate jobs, over a base
 - **Lifted card** (`box-shadow: 0 16px 40px rgba(0,0,0,0.5)`): A card on hover in the library grid, paired with a `-4px` translate.
 - **Gold emission** (`box-shadow: 0 10px 40px rgba(226,189,107,0.3–0.35)`): The primary CTA. This is light leaving the button, not the button floating.
 - **Sigil emission** (`box-shadow: 0 0 24px rgba(226,189,107,0.25)`): The 🌙 mark in the header. Symmetric, no offset — it glows in place.
+
+All eight live as CSS custom properties on `:root` (`--shadow-object`, `--shadow-card`, `--shadow-card-lift`, `--shadow-card-detail`, `--shadow-emission`, `--shadow-emission-strong`, `--shadow-emission-soft`, `--shadow-sigil`) and are consumed as `shadow-[var(--shadow-object)]`. They are re-declared wholesale in the light theme; see **The Token Or Nothing Rule**.
 
 ### Named Rules
 
@@ -275,11 +309,25 @@ The recurring silhouette is the tarot card itself at `aspect-[350/600]` with 12p
 - Sticky, `night-950/70` with `backdrop-blur-md`, separated by a `white/5` hairline. Brand mark left (a 🌙 in a `gold-400/40` ring with sigil emission, over the wordmark in Trirong Pale Gold with a Faint Mist descriptor beneath). Links right: full-pill, Dim Mist, hover to `white/5` fill and Pale Gold text. The last link is an outline button, not a text link.
 - **Mobile:** secondary links (ดวงประจำวัน, คลังไพ่) drop out below `sm`; แพ็กคำถาม and เริ่มดูดวง always survive. `whitespace-nowrap` on the nav prevents Thai labels from wrapping mid-word.
 
+### The Brand Mark (signature)
+A sun rising over a horizon, inside the same double ring and eight radial ticks as the card back — drawn as inline SVG in `components/brand-mark.tsx`, entirely in `currentColor` so one file serves both themes and any size. Judgement (XX) is the card of awakening, and a rising sun says that at 24px where a trumpet cannot. In the header it sits in a 40px `gold-400/40` ring with sigil emission; in the footer it runs bare at 20px. The wordmark is **Judgement** in Trirong with `tracking-wide`, and on phones the wordmark drops out entirely — the mark alone carries the brand so the nav, the theme control, and the CTA fit one row above 375px.
+
+### Theme Toggle (signature)
+A three-way segmented pill in the header — สว่าง / มืด / ตามเครื่อง — 28px buttons inside a `border-line` pill, the active one filled `gold-400/15` with `gold-200` glyphs. Icons are inline SVG on `currentColor`. It reads the preference through `useSyncExternalStore` (localStorage is external state, and this is the one React primitive that hydrates without a mismatch) and writes `data-theme` on `<html>`. The default is ตามเครื่อง, which resolves to **dark** whenever the device expresses no preference — the late-night visitor is the default visitor.
+
+**The No Flash Rule.** The theme is applied by an inline script in `<head>` during HTML parsing, before first paint. Applying it in an effect makes every light-theme visitor watch a dark screen flash on every single load. The script only ever writes `light` or `dark`, never `system`, so CSS needs exactly one override block.
+
 ### The Card Back (signature)
 Drawn as inline SVG so it scales to every size the deck needs. A rhombus lattice at `gold-400` 16% over a `night-700 → night-800 → night-950` diagonal gradient, a `gold-300` radial glow centered at 42% height, two inset gold rules (5px at 50% opacity, 9px at 22%), and a masked crescent inside two concentric rings with eight radial ticks. Six scattered `gold-200` stars at 75%. This is the most-repeated object on the site — it appears 78 times in the fan alone — so it carries the identity more than any single page does. Do not replace it with an image, and do not restyle it per-surface.
 
 ### The Deck Fan (signature)
-78 face-down cards on a scrolled strip, each rotated on a ±9° arc with a parabolic lift (`norm² × 30px`), z-indexed left to right and raised to `z-60` on hover. Hover/focus lifts a card `-1.75rem` out of the fan; picking it scales to 90% and fades to 0. During shuffle every card sways on a staggered `shuffle-sway` (1.1s, 0.06s steps of 12). This is the product — it is never replaced by a randomize-and-reveal, and never collapsed into a grid.
+78 face-down cards on a scrolled strip, each rotated on a ±9° arc with a parabolic lift (`norm² × 30px`), z-indexed left to right and raised to `z-60` on hover, focus, **or press**. Hover/focus/active lifts a card `-1.75rem` out of the fan; picking it scales to 90% and fades to 0. During shuffle every card sways on a staggered `shuffle-sway` (1.1s, 0.06s steps of 12). This is the product — it is never replaced by a randomize-and-reveal, and never collapsed into a grid.
+
+**The Fan Gap Is The Tap Target Rule.** Each card is covered by its neighbour, so `--fan-gap` — not `--fan-card-w` — is the real hit area. At the original 17px, 77 of 78 cards sat under the 24px WCAG 2.5.8 minimum and the deck was effectively unpickable by thumb. The gap is now 30/32/34px across the three breakpoints. Never tighten it to make the fan prettier or to shorten the scroll: a denser fan is a deck the visitor cannot choose from, and choosing is the entire product.
+
+**The Swipe Is Not A Pick Rule.** The deck must be scrolled before it can be chosen from, so a pointer that travels more than 10px between `pointerdown` and `click` is a scroll and is discarded. Without it a swipe that happens to end on a card spends one of the visitor's three draws with no way back. Keyboard activation reports no pointer origin and bypasses the check.
+
+**The Press Lift Rule.** Touch has no hover, so `group-active` lifts the card while the finger is still down. The visitor must be able to see which card they are about to take before they commit to it.
 
 ## Do's and Don'ts
 
@@ -294,6 +342,9 @@ Drawn as inline SVG so it scales to every size the deck needs. A rhombus lattice
 - **Do** keep focus visible as the gold border + `gold-400/20` ring; it is the system's only focus treatment.
 
 ### Don't:
+- **Don't** put the atmosphere washes on `body`'s `background-image`; they tile once per viewport and seam down the page. They belong on the fixed `body::before` layer.
+- **Don't** theme the deck. `deck-*` is fixed in both themes; a card is an object, not a surface.
+- **Don't** apply the theme in a `useEffect` — it must be set by the inline script before first paint.
 - **Don't** use pure black (`#000`) or pure white (`#fff`) as a text or surface color; the ground is `#06040f` and text tops out at `#efeaff`.
 - **Don't** put a black shadow and a colored glow on the same element.
 - **Don't** let a category accent hue become a text color, a button, or a panel background.

@@ -19,7 +19,7 @@ audience — it is where they go to look up the card they just drew.
 
 ## Product Purpose
 
-จันทราไพ่ is a Thai-language tarot site where the visitor draws their own cards and receives a
+Judgement is a Thai-language tarot site where the visitor draws their own cards and receives a
 reading written for their question and their personal details. It exists to give someone carrying
 an unresolved worry a moment of structure and reflection — คำทำนายเป็นแง่คิดและกำลังใจ,
 explicitly not a fixed prophecy and not medical, legal, or financial advice.
@@ -67,7 +67,8 @@ Supporting surface: **คลังไพ่** (`/cards`) — all 78 cards, uprig
   Trirong (display).
 - **No accounts and no server-side database, ever.** Querent details live only in the visitor's
   own `localStorage` under `chandra-tarot:querent`, and are transmitted only when a reading is
-  requested. Any future feature must work without server-side visitor storage.
+  requested. The theme choice lives beside it under `chandra-tarot:theme` and is never transmitted
+  at all. Any future feature must work without server-side visitor storage.
 - **The question is never stored.** It is deliberately outside the `Querent` shape, so the field
   is empty on every return; name and birth details persist.
 - **Free with no paywall and no ads.** Every reading, pack, and card meaning stays unmetered.
@@ -90,7 +91,12 @@ Supporting surface: **คลังไพ่** (`/cards`) — all 78 cards, uprig
 
 ## Brand Commitments
 
-- Name: **จันทราไพ่**. Reader voice: **จันทรา** (see persona above).
+- Name: **Judgement**, after the tarot card XX — the card of awakening and starting over. Renamed
+  from จันทราไพ่ on 2026-09-07; the wordmark is Latin, set in Trirong, and the mark is a sun rising
+  over a horizon inside the double ring borrowed from the card back.
+- **Open decision:** the reader persona is still named **จันทรา** in `lib/tarot/prompt.ts`. A reader
+  named จันทรา at a site called Judgement is coherent, but this was not explicitly confirmed —
+  do not rename the persona without asking.
 - The footer disclaimer is a standing commitment, not decoration: readings are แง่คิดและกำลังใจ,
   not fixed prophecy, and not medical, legal, or investment advice; the decision stays the
   visitor's.
@@ -128,7 +134,10 @@ Supporting surface: **คลังไพ่** (`/cards`) — all 78 cards, uprig
   the reading must be fully usable at that size.
 - `prefers-reduced-motion` is already honored globally — the ambient float/twinkle/glow, the card
   flip, and the shuffle sway all reduce. Any new motion must do the same.
-- Dark-only (`color-scheme: dark`) suits the late-night context; contrast on the dark ground is a
-  standing requirement, not an afterthought.
+- **Dark by default, with a light theme opt-in** (added 2026-09-07). The late-night context still
+  sets the default: a visitor who never touches the control gets dark, including when their device
+  expresses no preference. The header carries a สว่าง / มืด / ตามเครื่อง control; the choice lives in
+  `localStorage` under `chandra-tarot:theme` and is applied by an inline script before first paint,
+  so the theme never flashes. Contrast on **both** grounds is now a standing requirement.
 - Thai typography: `lang="th"` with Thai-subset fonts. Line-height and letter-spacing must respect
   Thai ascenders/descenders — Latin-tuned tracking breaks Thai text.

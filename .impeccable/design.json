@@ -1,110 +1,342 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-07T00:00:00.000Z",
-  "title": "Design System: จันทราไพ่",
+  "title": "Design System: Judgement",
   "extensions": {
     "colorMeta": {
       "gold-400": {
         "role": "primary",
         "displayName": "Candle Gold",
         "canonical": "#e2bd6b",
-        "tonalRamp": ["#2a1f08", "#4a3a11", "#6d571c", "#93762a", "#c9a227", "#e2bd6b", "#f0d89b", "#f9eeda"]
+        "tonalRamp": [
+          "#2a1f08",
+          "#4a3a11",
+          "#6d571c",
+          "#93762a",
+          "#c9a227",
+          "#e2bd6b",
+          "#f0d89b",
+          "#f9eeda"
+        ],
+        "light": "#9a7414"
       },
       "gold-300": {
         "role": "primary",
         "displayName": "Lit Gold",
         "canonical": "#f0d89b",
-        "tonalRamp": ["#2e2510", "#4f4019", "#725d24", "#987f31", "#c0a447", "#e2bd6b", "#f0d89b", "#fbf3e2"]
+        "tonalRamp": [
+          "#2e2510",
+          "#4f4019",
+          "#725d24",
+          "#987f31",
+          "#c0a447",
+          "#e2bd6b",
+          "#f0d89b",
+          "#fbf3e2"
+        ],
+        "light": "#82640f"
       },
       "gold-200": {
         "role": "primary",
         "displayName": "Pale Gold",
         "canonical": "#f7e7bf",
-        "tonalRamp": ["#302915", "#524621", "#75652e", "#9a883c", "#c0ac5e", "#dfcd91", "#f7e7bf", "#fdf8ec"]
+        "tonalRamp": [
+          "#302915",
+          "#524621",
+          "#75652e",
+          "#9a883c",
+          "#c0ac5e",
+          "#dfcd91",
+          "#f7e7bf",
+          "#fdf8ec"
+        ],
+        "light": "#7a5c0d"
       },
       "gold-500": {
         "role": "primary",
         "displayName": "Deep Gold",
         "canonical": "#c9a227",
-        "tonalRamp": ["#241b05", "#3f300a", "#5c4711", "#7b5f17", "#9c7a1e", "#c9a227", "#e0bf58", "#f2dda0"]
+        "tonalRamp": [
+          "#241b05",
+          "#3f300a",
+          "#5c4711",
+          "#7b5f17",
+          "#9c7a1e",
+          "#c9a227",
+          "#e0bf58",
+          "#f2dda0"
+        ],
+        "light": "#5c440a"
       },
       "mystic-400": {
         "role": "secondary",
         "displayName": "Mystic Violet",
         "canonical": "#a68bff",
-        "tonalRamp": ["#18103a", "#271a5e", "#392785", "#4d35ab", "#6b4fd0", "#8a6cf0", "#a68bff", "#d6c9ff"]
+        "tonalRamp": [
+          "#18103a",
+          "#271a5e",
+          "#392785",
+          "#4d35ab",
+          "#6b4fd0",
+          "#8a6cf0",
+          "#a68bff",
+          "#d6c9ff"
+        ],
+        "light": "#5b3fd6"
       },
       "mystic-500": {
         "role": "secondary",
         "displayName": "Deep Violet",
         "canonical": "#7c5cff",
-        "tonalRamp": ["#130c33", "#1f1355", "#2e1c7c", "#4028a6", "#5b3fd6", "#7c5cff", "#a68bff", "#d6c9ff"]
+        "tonalRamp": [
+          "#130c33",
+          "#1f1355",
+          "#2e1c7c",
+          "#4028a6",
+          "#5b3fd6",
+          "#7c5cff",
+          "#a68bff",
+          "#d6c9ff"
+        ],
+        "light": "#4a2fb8"
       },
       "mystic-600": {
         "role": "secondary",
         "displayName": "Wash Violet",
         "canonical": "#5b3fd6",
-        "tonalRamp": ["#0f0a26", "#191040", "#25185e", "#33227f", "#4530a8", "#5b3fd6", "#8467f0", "#c2b1fb"]
+        "tonalRamp": [
+          "#0f0a26",
+          "#191040",
+          "#25185e",
+          "#33227f",
+          "#4530a8",
+          "#5b3fd6",
+          "#8467f0",
+          "#c2b1fb"
+        ],
+        "light": "#3d259c"
       },
       "night-950": {
         "role": "neutral",
         "displayName": "Ink Night",
         "canonical": "#06040f",
-        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "light": "#f4f1fb"
       },
       "night-900": {
         "role": "neutral",
         "displayName": "Panel Night",
         "canonical": "#0c0820",
-        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "light": "#fbfaff"
       },
       "night-850": {
         "role": "neutral",
         "displayName": "Raised Night",
         "canonical": "#120d2b",
-        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "light": "#ffffff"
       },
       "night-800": {
         "role": "neutral",
         "displayName": "Card Night",
         "canonical": "#191139",
-        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
-      },
-      "night-700": {
-        "role": "neutral",
-        "displayName": "Deck Night",
-        "canonical": "#241a4d",
-        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
-      },
-      "night-600": {
-        "role": "neutral",
-        "displayName": "Deck Sheen",
-        "canonical": "#33256b",
-        "tonalRamp": ["#06040f", "#0c0820", "#120d2b", "#191139", "#241a4d", "#33256b", "#4a3a91", "#6d5cc0"]
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "light": "#e9e2f5"
       },
       "mist-100": {
         "role": "neutral",
         "displayName": "Moon Mist",
         "canonical": "#efeaff",
-        "tonalRamp": ["#191533", "#2b2456", "#40367c", "#584ba1", "#7568bd", "#9b90d4", "#cabfe8", "#efeaff"]
+        "tonalRamp": [
+          "#191533",
+          "#2b2456",
+          "#40367c",
+          "#584ba1",
+          "#7568bd",
+          "#9b90d4",
+          "#cabfe8",
+          "#efeaff"
+        ],
+        "light": "#1a1433"
       },
       "mist-300": {
         "role": "neutral",
         "displayName": "Dim Mist",
         "canonical": "#cabfe8",
-        "tonalRamp": ["#191533", "#2b2456", "#40367c", "#584ba1", "#7568bd", "#9184b8", "#cabfe8", "#efeaff"]
+        "tonalRamp": [
+          "#191533",
+          "#2b2456",
+          "#40367c",
+          "#584ba1",
+          "#7568bd",
+          "#9184b8",
+          "#cabfe8",
+          "#efeaff"
+        ],
+        "light": "#4a3f72"
       },
       "mist-500": {
         "role": "neutral",
         "displayName": "Faint Mist",
         "canonical": "#9184b8",
-        "tonalRamp": ["#191533", "#2b2456", "#40367c", "#584ba1", "#7568bd", "#9184b8", "#cabfe8", "#efeaff"]
+        "tonalRamp": [
+          "#191533",
+          "#2b2456",
+          "#40367c",
+          "#584ba1",
+          "#7568bd",
+          "#9184b8",
+          "#cabfe8",
+          "#efeaff"
+        ],
+        "light": "#6f6394"
       },
-      "alert-rose": {
+      "deck-700": {
+        "role": "neutral",
+        "displayName": "Deck Night",
+        "canonical": "#241a4d",
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "note": "คงที่ทั้งสองธีม ไพ่เป็นวัตถุจริง ไม่ใช่พื้นผิวของหน้าเว็บ"
+      },
+      "deck-600": {
+        "role": "neutral",
+        "displayName": "Deck Sheen",
+        "canonical": "#33256b",
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "note": "คงที่ทั้งสองธีม ไพ่เป็นวัตถุจริง ไม่ใช่พื้นผิวของหน้าเว็บ"
+      },
+      "deck-800": {
+        "role": "neutral",
+        "displayName": "Deck Body",
+        "canonical": "#191139",
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "note": "คงที่ทั้งสองธีม ไพ่เป็นวัตถุจริง ไม่ใช่พื้นผิวของหน้าเว็บ"
+      },
+      "deck-950": {
+        "role": "neutral",
+        "displayName": "Deck Edge",
+        "canonical": "#06040f",
+        "tonalRamp": [
+          "#06040f",
+          "#0c0820",
+          "#120d2b",
+          "#191139",
+          "#241a4d",
+          "#33256b",
+          "#4a3a91",
+          "#6d5cc0"
+        ],
+        "note": "คงที่ทั้งสองธีม ไพ่เป็นวัตถุจริง ไม่ใช่พื้นผิวของหน้าเว็บ"
+      },
+      "line-faint": {
+        "role": "neutral",
+        "displayName": "Divider Hairline",
+        "canonical": "rgb(255 255 255 / 0.05)",
+        "light": "rgb(42 32 74 / 0.07)"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Surface Hairline",
+        "canonical": "rgb(255 255 255 / 0.1)",
+        "light": "rgb(42 32 74 / 0.12)"
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Active Hairline",
+        "canonical": "rgb(255 255 255 / 0.18)",
+        "light": "rgb(42 32 74 / 0.22)"
+      },
+      "inset": {
+        "role": "neutral",
+        "displayName": "Inset Fill",
+        "canonical": "rgb(255 255 255 / 0.03)",
+        "light": "rgb(42 32 74 / 0.035)"
+      },
+      "inset-strong": {
+        "role": "neutral",
+        "displayName": "Chip Fill",
+        "canonical": "rgb(255 255 255 / 0.06)",
+        "light": "rgb(42 32 74 / 0.06)"
+      },
+      "alert": {
         "role": "tertiary",
         "displayName": "Alert Rose",
         "canonical": "#fda4af",
-        "tonalRamp": ["#3d1119", "#611c28", "#89283a", "#b1364d", "#d45467", "#ec7f8e", "#fda4af", "#ffe4e6"]
+        "tonalRamp": [
+          "#3d1119",
+          "#611c28",
+          "#89283a",
+          "#b1364d",
+          "#d45467",
+          "#ec7f8e",
+          "#fda4af",
+          "#ffe4e6"
+        ],
+        "light": "#a3123c"
       }
     },
     "typographyMeta": {
@@ -133,32 +365,38 @@
       {
         "name": "object-weight",
         "value": "0 20px 60px rgba(0, 0, 0, 0.35)",
-        "purpose": "Panels floating above the page — the AI reading panel, the card detail sheet. Wide, low, pure black."
+        "purpose": "Panels floating above the page — the AI reading panel, the card detail sheet. Wide, low, pure black.",
+        "light": "0 20px 60px rgb(42 32 74 / 0.1)"
       },
       {
         "name": "card-weight",
         "value": "0 10px 30px rgba(0, 0, 0, 0.45)",
-        "purpose": "A single card resting on the table — every card back in the fan. Tighter and darker than object weight."
+        "purpose": "A single card resting on the table — every card back in the fan. Tighter and darker than object weight.",
+        "light": "0 10px 30px rgb(42 32 74 / 0.18)"
       },
       {
         "name": "card-lifted",
         "value": "0 16px 40px rgba(0, 0, 0, 0.5)",
-        "purpose": "A library-grid card on hover, paired with a -4px translate."
+        "purpose": "A library-grid card on hover, paired with a -4px translate.",
+        "light": "0 16px 40px rgb(42 32 74 / 0.22)"
       },
       {
         "name": "card-detail",
         "value": "0 14px 36px rgba(0, 0, 0, 0.5)",
-        "purpose": "The large card image inside a detail sheet."
+        "purpose": "The large card image inside a detail sheet.",
+        "light": "0 14px 36px rgb(42 32 74 / 0.22)"
       },
       {
         "name": "gold-emission",
         "value": "0 10px 40px rgba(226, 189, 107, 0.3)",
-        "purpose": "The primary CTA. Light leaving the button, not the button floating. Rises to 0.35 alpha on the form submit."
+        "purpose": "The primary CTA. Light leaving the button, not the button floating. Rises to 0.35 alpha on the form submit.",
+        "light": "0 10px 40px rgb(122 92 13 / 0.25)"
       },
       {
         "name": "sigil-emission",
         "value": "0 0 24px rgba(226, 189, 107, 0.25)",
-        "purpose": "The 🌙 mark in the header. Symmetric, no offset — it glows in place."
+        "purpose": "The 🌙 mark in the header. Symmetric, no offset — it glows in place.",
+        "light": "0 0 24px rgb(122 92 13 / 0.2)"
       }
     ],
     "motion": [
@@ -204,10 +442,36 @@
       }
     ],
     "breakpoints": [
-      { "name": "sm", "value": "640px" },
-      { "name": "md", "value": "768px" },
-      { "name": "lg", "value": "1024px" },
-      { "name": "container", "value": "72rem" }
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "container",
+        "value": "72rem"
+      }
+    ],
+    "themes": [
+      {
+        "name": "dark",
+        "selector": ":root",
+        "default": true,
+        "note": "ค่าตั้งต้น ผู้ใช้ที่ไม่เคยแตะปุ่มได้ธีมนี้เสมอ"
+      },
+      {
+        "name": "light",
+        "selector": ":root[data-theme=\"light\"]",
+        "displayName": "รุ่งอรุณสีม่วง",
+        "note": "ห้องเดิมตอนฟ้าสาง ทองยังเป็นแหล่งแสง ม่วงยังเป็นเสียงของ AI เพียงแต่เข้มลงให้อ่านออกบนพื้นสว่าง ดาวดับ"
+      }
     ]
   },
   "components": [
@@ -290,6 +554,22 @@
       "description": "The signature object — 78 of them in the fan alone. Inline SVG so it scales to every size the deck needs; never replaced by an image, never restyled per-surface.",
       "html": "<div class=\"ds-card-back\"><svg viewBox=\"0 0 120 200\" preserveAspectRatio=\"xMidYMid slice\" aria-hidden=\"true\"><defs><radialGradient id=\"ds-cb-glow\" cx=\"50%\" cy=\"42%\" r=\"55%\"><stop offset=\"0%\" stop-color=\"#f0d89b\" stop-opacity=\"0.35\"/><stop offset=\"100%\" stop-color=\"#f0d89b\" stop-opacity=\"0\"/></radialGradient><mask id=\"ds-cb-moon\"><rect x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" fill=\"white\"/><circle cx=\"6.5\" cy=\"-2.5\" r=\"11\" fill=\"black\"/></mask><pattern id=\"ds-cb-grid\" width=\"14\" height=\"14\" patternUnits=\"userSpaceOnUse\"><path d=\"M7 0 L14 7 L7 14 L0 7 Z\" fill=\"none\" stroke=\"#e2bd6b\" stroke-opacity=\"0.16\" stroke-width=\"0.6\"/></pattern></defs><rect width=\"120\" height=\"200\" fill=\"url(#ds-cb-grid)\"/><rect width=\"120\" height=\"200\" fill=\"url(#ds-cb-glow)\"/><rect x=\"5\" y=\"5\" width=\"110\" height=\"190\" rx=\"7\" fill=\"none\" stroke=\"#e2bd6b\" stroke-opacity=\"0.5\" stroke-width=\"1\"/><rect x=\"9\" y=\"9\" width=\"102\" height=\"182\" rx=\"5\" fill=\"none\" stroke=\"#e2bd6b\" stroke-opacity=\"0.22\" stroke-width=\"0.5\"/><g transform=\"translate(60 100)\"><circle r=\"22\" fill=\"none\" stroke=\"#f0d89b\" stroke-opacity=\"0.55\" stroke-width=\"0.9\"/><circle r=\"15\" fill=\"none\" stroke=\"#f0d89b\" stroke-opacity=\"0.3\" stroke-width=\"0.6\"/><circle r=\"12.5\" fill=\"#f0d89b\" fill-opacity=\"0.85\" mask=\"url(#ds-cb-moon)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(45)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(90)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(135)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(180)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(225)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(270)\"/><line x1=\"0\" y1=\"-27\" x2=\"0\" y2=\"-32\" stroke=\"#f0d89b\" stroke-opacity=\"0.45\" stroke-width=\"0.8\" transform=\"rotate(315)\"/></g><g fill=\"#f7e7bf\" fill-opacity=\"0.75\"><circle cx=\"30\" cy=\"42\" r=\"1.1\"/><circle cx=\"88\" cy=\"56\" r=\"0.9\"/><circle cx=\"24\" cy=\"150\" r=\"0.9\"/><circle cx=\"94\" cy=\"146\" r=\"1.1\"/><circle cx=\"60\" cy=\"28\" r=\"1.3\"/><circle cx=\"60\" cy=\"172\" r=\"1.3\"/></g></svg></div>",
       "css": ".ds-card-back { position: relative; width: 116px; height: 199px; overflow: hidden; background: linear-gradient(to bottom right, #241a4d, #191139, #06040f); border: 1px solid rgba(226, 189, 107, 0.3); border-radius: 0.75rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-card-back:hover { transform: translateY(-1.75rem); } .ds-card-back svg { width: 100%; height: 100%; display: block; }"
+    },
+    {
+      "name": "Brand Mark",
+      "kind": "custom",
+      "refersTo": "brand-mark",
+      "description": "A sun rising over a horizon inside the card back's double ring — Judgement (XX) is the card of awakening. All currentColor, so one file serves both themes at any size.",
+      "html": "<span class=\"ds-brand\"><svg viewBox=\"0 0 40 40\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"20\" cy=\"20\" r=\"16.4\" stroke=\"currentColor\" stroke-opacity=\"0.5\" stroke-width=\"1.1\"/><circle cx=\"20\" cy=\"20\" r=\"12.6\" stroke=\"currentColor\" stroke-opacity=\"0.22\" stroke-width=\"0.7\"/><path d=\"M13.6 24.1a6.4 6.4 0 0 1 12.8 0Z\" fill=\"currentColor\" fill-opacity=\"0.9\"/><path d=\"M9.4 24.1h21.2\" stroke=\"currentColor\" stroke-opacity=\"0.75\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><path d=\"M20 11.2v2M13.9 13.5l1.3 1.5M26.1 13.5l-1.3 1.5\" stroke=\"currentColor\" stroke-opacity=\"0.55\" stroke-width=\"1.1\" stroke-linecap=\"round\"/></svg></span>",
+      "css": ".ds-brand{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;color:#f0d89b;background:#191139;border:1px solid rgba(226,189,107,0.4);border-radius:9999px;box-shadow:0 0 24px rgba(226,189,107,0.25)}.ds-brand svg{width:1.5rem;height:1.5rem}"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "custom",
+      "refersTo": "theme-toggle",
+      "description": "Three-way segmented pill in the header — สว่าง / มืด / ตามเครื่อง. Default resolves to dark whenever the device states no preference.",
+      "html": "<div class=\"ds-theme\" role=\"group\" aria-label=\"ธีมของเว็บ\"><button class=\"ds-theme-btn is-on\" aria-pressed=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><circle cx=\"12\" cy=\"12\" r=\"4.2\"/><path stroke-linecap=\"round\" d=\"M12 2.6v2.1M12 19.3v2.1M4.36 4.36l1.48 1.48M18.16 18.16l1.48 1.48M2.6 12h2.1M19.3 12h2.1M4.36 19.64l1.48-1.48M18.16 5.84l1.48-1.48\"/></svg></button><button class=\"ds-theme-btn\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M20.2 14.6A8.4 8.4 0 1 1 9.4 3.8a6.6 6.6 0 0 0 10.8 10.8Z\"/></svg></button><button class=\"ds-theme-btn\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><rect x=\"2.8\" y=\"4.4\" width=\"18.4\" height=\"12\" rx=\"1.9\"/><path stroke-linecap=\"round\" d=\"M9 19.6h6\"/></svg></button></div>",
+      "css": ".ds-theme{display:inline-flex;align-items:center;gap:0.125rem;padding:0.125rem;border:1px solid rgba(255,255,255,0.1);border-radius:9999px}.ds-theme-btn{display:flex;align-items:center;justify-content:center;width:1.75rem;height:1.75rem;background:none;border:none;border-radius:9999px;color:#9184b8;cursor:pointer;transition:background-color 150ms,color 150ms}.ds-theme-btn svg{width:1rem;height:1rem}.ds-theme-btn:hover{background:rgba(255,255,255,0.05);color:#cabfe8}.ds-theme-btn.is-on{background:rgba(226,189,107,0.15);color:#f7e7bf}"
     }
   ],
   "narrative": {
@@ -301,7 +581,7 @@
       "Trirong (serif) for every heading and every moment of voice; Noto Sans Thai for everything read at length",
       "Full pills for actions, 16–24px rounding on surfaces, hairline white borders at 10%",
       "Two separate depth vocabularies: black shadow for weight, colored glow for emission",
-      "Dark-only by commitment (color-scheme: dark), motion fully reduced under prefers-reduced-motion"
+      "Dark by default with a light \"violet dawn\" theme; motion fully reduced under prefers-reduced-motion"
     ],
     "rules": [
       {
@@ -348,6 +628,36 @@
         "name": "The Hairline Before Shadow Rule",
         "body": "Reach for a 1px white/10 border before reaching for a shadow. Most panels in this system are separated by tone and hairline alone; adding shadow to a resting panel flattens the ones that have earned it.",
         "section": "elevation"
+      },
+      {
+        "name": "The Token Or Nothing Rule",
+        "body": "No component may name a color, border, or shadow literally. border-white/10, bg-white/[0.03], text-rose-300 and shadow-[0_20px_60px_rgba(0,0,0,0.35)] are banned: a hardcoded white hairline is invisible on paper and a black shadow reads as a smudge. Use border-line, bg-inset, text-alert, shadow-[var(--shadow-object)].",
+        "section": "colors"
+      },
+      {
+        "name": "The Deck Is An Object Rule",
+        "body": "The card itself never themes. deck-700 / deck-800 / deck-950 are fixed in both themes, because a printed card lying on a pale table is still a dark card. Only the room changes; the deck does not.",
+        "section": "colors"
+      },
+      {
+        "name": "The Atmosphere Is Fixed Rule",
+        "body": "The washes must never be a background-image on body. <html> is h-full, so a body background propagates to the canvas using the root's one-viewport-tall positioning area, and background-repeat tiles it once per screen — a visible seam all the way down. Use the fixed body::before layer.",
+        "section": "layout"
+      },
+      {
+        "name": "The No Flash Rule",
+        "body": "The theme is applied by an inline script in <head> during HTML parsing, before first paint. Applying it in an effect makes every light-theme visitor watch a dark screen flash on every load.",
+        "section": "components"
+      },
+      {
+        "name": "The Fan Gap Is The Tap Target Rule",
+        "body": "Each card is covered by its neighbour, so --fan-gap, not --fan-card-w, is the real hit area. At 17px, 77 of 78 cards sat under the 24px WCAG 2.5.8 minimum and the deck was unpickable by thumb. The gap is now 30/32/34px. Never tighten it to make the fan prettier.",
+        "section": "components"
+      },
+      {
+        "name": "The Swipe Is Not A Pick Rule",
+        "body": "A pointer that travels more than 10px between pointerdown and click is a scroll and is discarded. Without it a swipe ending on a card spends one of the visitor's three draws with no way back.",
+        "section": "components"
       }
     ],
     "dos": [
@@ -358,7 +668,9 @@
       "Do build every layout as one column first; columns appear at md/lg and nowhere below 640px.",
       "Do use Trirong for anything with a voice and Noto Sans Thai for anything read at length.",
       "Do give every new motion a prefers-reduced-motion path — the global reduce block already covers animation/transition, so anything driven by JS must opt in itself.",
-      "Do keep focus visible as the gold border + gold-400/20 ring; it is the system's only focus treatment."
+      "Do keep focus visible as the gold border + gold-400/20 ring; it is the system's only focus treatment.",
+      "Do reach for a token for every color, border, and shadow; a literal value silently opts that element out of the light theme.",
+      "Do check both grounds before shipping a color: small text needs 4.5:1 against #f4f1fb as well as against #06040f."
     ],
     "donts": [
       "Don't use pure black (#000) or pure white (#fff) as a text or surface color; the ground is #06040f and text tops out at #efeaff.",
@@ -368,7 +680,11 @@
       "Don't introduce a third typeface, or a square-cornered button.",
       "Don't use solid opaque borders; every border in this system is a white or accent hairline under 50% opacity.",
       "Don't dim text below Faint Mist (#9184b8) on the night ground.",
-      "Don't compress the ritual for speed — the shuffle, the fan, and the one-at-a-time flip are the product, not loading states."
+      "Don't compress the ritual for speed — the shuffle, the fan, and the one-at-a-time flip are the product, not loading states.",
+      "Don't put the atmosphere washes on body's background-image; they tile once per viewport and seam down the page.",
+      "Don't theme the deck. deck-* is fixed; a card is an object, not a surface.",
+      "Don't apply the theme in a useEffect; it must be set by the inline script before first paint.",
+      "Don't tighten the fan gap below 30px on phones; the gap is the tap target."
     ]
   }
 }

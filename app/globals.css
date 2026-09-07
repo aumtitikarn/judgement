@@ -84,7 +84,7 @@
   --color-night-950: #f4f1fb;
   --color-night-900: #fbfaff;
   --color-night-850: #ffffff;
-  --color-night-800: #efeaf9;
+  --color-night-800: #e9e2f5;
 
   --color-mystic-400: #5b3fd6;
   --color-mystic-500: #4a2fb8;
@@ -93,7 +93,9 @@
   --color-gold-200: #7a5c0d;
   --color-gold-300: #82640f;
   --color-gold-400: #9a7414;
-  --color-gold-500: #7a5c0d;
+  /* ใช้เป็นหัวไล่สีของปุ่มหลักอย่างเดียว ไม่เคยเป็นสีตัวอักษร จึงเข้มได้เต็มที่
+     เพื่อให้ไล่สีมีทิศทางเหมือนธีมมืด ถ้าตั้งเท่า gold-300 ปุ่มจะแบนเป็นสีน้ำตาลตัน */
+  --color-gold-500: #5c440a;
 
   --color-mist-100: #1a1433;
   --color-mist-300: #4a3f72;
@@ -247,16 +249,18 @@ h1, h2, h3, .font-display {
   }
 }
 
-/* สำรับไพ่ที่กางให้ผู้ใช้เลือกเอง */
+/* สำรับไพ่ที่กางให้ผู้ใช้เลือกเอง
+   ระยะห่างคือขนาดของพื้นที่แตะจริง เพราะไพ่ใบถัดไปทับใบก่อนหน้าไว้เกือบหมด
+   17px เดิมทำให้ 77 ใบจาก 78 ใบเล็กกว่าเกณฑ์ 24px ของ WCAG 2.5.8 จนแตะพลาดตลอด */
 .deck-fan {
-  --fan-gap: 17px;
+  --fan-gap: 30px;
   --fan-card-w: 78px;
   --fan-card-h: 134px;
   --fan-strip-h: 210px;
 }
 @media (min-width: 640px) {
   .deck-fan {
-    --fan-gap: 24px;
+    --fan-gap: 32px;
     --fan-card-w: 104px;
     --fan-card-h: 178px;
     --fan-strip-h: 268px;
@@ -264,7 +268,7 @@ h1, h2, h3, .font-display {
 }
 @media (min-width: 1024px) {
   .deck-fan {
-    --fan-gap: 28px;
+    --fan-gap: 34px;
     --fan-card-w: 116px;
     --fan-card-h: 199px;
     --fan-strip-h: 296px;
@@ -275,7 +279,8 @@ h1, h2, h3, .font-display {
   z-index: var(--fan-z, 1);
 }
 .fan-card:hover,
-.fan-card:focus-visible {
+.fan-card:focus-visible,
+.fan-card:active {
   z-index: 60;
 }
 .fan-card:disabled {
