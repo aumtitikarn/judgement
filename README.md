@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# จันทราไพ่ — เว็บดูดวงไพ่ทาโรต์
 
-## Getting Started
+เว็บเปิดไพ่ทาโรต์ภาษาไทย จุดเด่นคือ **ผู้ใช้เลือกไพ่เอง** จากสำรับที่กางออกมาทั้ง 78 ใบ
+ไม่ใช่การสุ่มให้แล้วแสดงผลทันที
 
-First, run the development server:
+## สามทางเข้าใช้งาน
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. **เริ่มดูดวง** (`/reading`) — ไม่ต้องเลือกหมวด พิมพ์คำถามของตัวเองแล้วเปิดไพ่ 3 ใบ
+   (สถานการณ์ตอนนี้ / สิ่งที่ยังมองไม่เห็น / ทางที่กำลังจะไป)
+2. **ดูดวงประจำวัน** (`/reading/daily`) — เปิดไพ่ 1 ใบ ผลถูกเก็บไว้ใน `localStorage` จนถึงสิ้นวัน
+3. **แพ็กคำถาม** (`/packs`) — คำถามที่คนถามบ่อย 71 ข้อ ใน 11 หมวด แบ่งเป็น 23 ชุด ชุดละไม่เกิน 4 ข้อ
+   **หนึ่งคำถามใช้ไพ่หนึ่งใบ** ชุด 4 คำถามจึงเปิดไพ่ 4 ใบ แล้ว AI ตอบทีละข้อ
+
+หน้าอื่น: **คลังไพ่** (`/cards`) อ่านความหมายไพ่ครบ 78 ใบ ทั้งหงายและกลับหัว
+
+## แพ็กคำถาม
+
+`lib/tarot/packs.ts` เก็บหมวดและคำถามทั้งหมด ส่วนการแบ่งชุดคำนวณเองด้วย `toPacks()`
+ชุดละไม่เกิน 4 ข้อ และกระจายให้เท่ากันที่สุดเพื่อไม่ให้ชุดท้ายเหลือคำถามเดียวโดด ๆ
+(เช่น 5 ข้อ → 3+2 ไม่ใช่ 4+1) เพิ่มหรือแก้คำถามในไฟล์นี้ได้เลย ชุดจะถูกแบ่งใหม่ให้อัตโนมัติ
+
+แต่ละหมวดระบุ `meaningKey` ว่าจะหยิบความหมายไพ่ด้านไหน (`general` / `love` / `work` / `money` / `family`)
+มาเป็นวัตถุดิบให้ AI
+
+## รูปแบบการเปิดไพ่
+
+`lib/tarot/spread.ts` รวมทั้งสามโหมดให้เป็นโครงเดียวกัน (`Spread`) ต่างกันที่จำนวนช่อง
+ชื่อของแต่ละช่อง และผู้ใช้ต้องพิมพ์คำถามเองหรือไม่ ทุกโหมดมี `ref` เป็นสตริงสั้น ๆ
+(`custom`, `daily`, `pack:love:1`) ที่ส่งให้ API แล้วเซิร์ฟเวอร์ประกอบสเปรดเดิมขึ้นมาเองได้
+
+## ขั้นตอนการเปิดไพ่
+
+`intro` (กรอกข้อมูล + คำถามถ้ามี) → `shuffling` (สับไพ่) → `picking` (ผู้ใช้แตะเลือกไพ่จากสำรับที่กาง)
+→ `reading` (พลิกเปิดทีละใบ แสดงคำทำนายประจำไพ่ แล้วสตรีมคำทำนายเฉพาะบุคคลจาก AI)
+
+## คำทำนายจาก AI
+
+ข้อมูลผู้ถามถูกเก็บไว้ใน `localStorage` ของเครื่องผู้ใช้เท่านั้น (คีย์ `chandra-tarot:querent`)
+ไม่มีฐานข้อมูลฝั่งเซิร์ฟเวอร์ และจะถูกส่งออกไปก็ต่อเมื่อขอคำทำนายเท่านั้น
+
+**คำถามไม่ถูกเก็บ** — คำถามไม่ได้อยู่ในโครงสร้าง `Querent` เลย จึงไม่มีทางถูกเขียนลง `localStorage`
+ทุกครั้งที่กลับมาที่ฟอร์ม ช่องคำถามจะว่างเสมอ ส่วนชื่อและวันเกิดยังอยู่ครบ
+
+`POST /api/reading` รับ `{ spread, question?, querent, draws: [{ id, reversed }] }` แล้วสตรีมคำทำนายกลับมาเป็น
+`text/plain` เซิร์ฟเวอร์ประกอบทั้งสเปรดและความหมายไพ่ขึ้นมาเองจาก `ref` และ `id` จึงไม่เชื่อข้อความที่ไคลเอนต์ส่งมา
+(คำถามของโหมดแพ็กและโหมดประจำวันมาจากฝั่งเซิร์ฟเวอร์ล้วน ๆ) และจำกัดการเรียกไว้ที่ 8 ครั้งต่อนาทีต่อ IP
+
+โมเดลถูกสั่งให้คั่นคำตอบด้วยเครื่องหมายเพื่อให้แยกไปวางถูกที่ระหว่างสตรีม
+
+```
+[[CARD1]] … [[CARDn]]   คำแปลไพ่ทีละใบ (โหมดแพ็กคือคำตอบของคำถามข้อนั้น) → ไหลเข้ากล่องของไพ่ใบนั้น
+[[SUMMARY]]             คำตอบรวมของคำถาม
+[[ACTION]]              คำแนะนำ 3 ข้อ
+[[TIMING]]              ช่วงเวลาที่ควรจับตา
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ถ้า AI ล่มหรือยังตอบมาไม่ถึงใบนั้น กล่องไพ่จะแสดงความหมายพื้นฐานจากคลังไพ่แทน
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+lib/tarot/packs.ts          หมวดและคำถามทั้งหมด + การแบ่งชุด
+lib/tarot/spread.ts         รูปแบบการเปิดไพ่ทั้งสามโหมด และการแปลง ref กลับเป็นสเปรด
+lib/tarot/querent.ts        ข้อมูลส่วนตัวของผู้ถาม + ตรวจความถูกต้อง + อ่าน/เขียน localStorage
+lib/tarot/prompt.ts         ประกอบ system prompt และข้อมูลไพ่ที่ส่งให้โมเดล
+lib/tarot/ai-sections.ts    แยกข้อความที่สตรีมมาเป็นส่วน ๆ (ทำงานกับข้อความที่ยังมาไม่ครบได้)
+components/tarot/use-ai-reading.ts   hook ที่ยิง API แล้วกระจายผลให้ทั้งกล่องไพ่และกล่องสรุป
+app/api/reading/            route handler ที่คุยกับ Google Gemini
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## โครงสร้างข้อมูลไพ่
 
-## Learn More
+```
+lib/tarot/
+  types.ts        โครงสร้าง Meaning / CardSeed / TarotCard / DrawnCard
+  seed.ts         ตัวช่วย m() และ c() สำหรับเขียนข้อมูลไพ่แบบสั้น
+  data/*.ts       ข้อมูลไพ่ 78 ใบ แยกตามชุด (major, cups, swords, wands, pentacles)
+  deck.ts         ประกอบสำรับ + ตั้งค่าแพ็กคำถาม (TOPICS) + ฟังก์ชันสับไพ่
+  summary.ts      สรุปภาพรวมจากสัดส่วนไพ่ที่เปิดได้
+```
 
-To learn more about Next.js, take a look at the following resources:
+ไพ่แต่ละใบมีความหมายแยกเป็น 2 ทิศทาง (หงาย / กลับหัว) และในแต่ละทิศทางมี
+`keywords`, `general`, `love`, `work`, `money`, `family`, `advice`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## รันโปรเจกต์
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+คัดลอก `.env.example` เป็น `.env` แล้วใส่คีย์จาก [Google AI Studio](https://aistudio.google.com/apikey)
 
-## Deploy on Vercel
+```bash
+cp .env.example .env
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| ตัวแปร | จำเป็น | ค่าเริ่มต้น |
+| --- | --- | --- |
+| `GOOGLE_API_KEY` | ใช่ (รองรับ `GEMINI_API_KEY`, `GOOGLE-API`, `GPT-API` ด้วย) | — |
+| `GEMINI_MODEL` | ไม่ | `gemini-3.6-flash` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ถ้าไม่ตั้งค่าคีย์ ส่วนอื่นของเว็บยังใช้ได้ตามปกติ เพียงแต่กล่องคำทำนายจาก AI จะแจ้งว่ายังไม่ได้ตั้งค่า
+
+```bash
+pnpm install
+pnpm dev
+```
+
+เปิด [http://localhost:3000](http://localhost:3000)
+
+## เครดิตภาพไพ่
+
+ภาพจากสำรับ Rider–Waite–Smith ซึ่งเป็นสาธารณสมบัติในสหรัฐอเมริกา
+ไฟล์ภาพและรายชื่อไพ่มาจากโปรเจกต์ [tarot-json](https://github.com/equokka/tarot-json) (MIT)
+สำเนาสัญญาอนุญาตอยู่ที่ `public/cards/LICENSE.txt`
+คำทำนายภาษาไทยทั้งหมดเขียนขึ้นใหม่สำหรับโปรเจกต์นี้
+# judgement
